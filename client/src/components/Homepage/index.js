@@ -5,6 +5,7 @@ import PopularCategory from "./PopularCategory";
 import Testimonial from "./Testimonial";
 import TheBestPart from "./TheBestPart";
 import YourDreamJob from "./YourDreamJob";
+import TrustedBy from "./TrustedBy";
 
 export {
   AllDoable,
@@ -14,4 +15,5 @@ export {
   Testimonial,
   TheBestPart,
   YourDreamJob,
+  TrustedBy
 };

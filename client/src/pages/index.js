@@ -7,11 +7,13 @@ import {
   Testimonial,
   TheBestPart,
   YourDreamJob,
+  TrustedBy
 } from "../components/Homepage";
 
 const Index = () => {
   return <div >
     <HeroSection/>
+    <TrustedBy/>
     <PopularCategory/>
     <TheBestPart/>
     <YourDreamJob/>
