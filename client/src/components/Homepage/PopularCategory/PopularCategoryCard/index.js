@@ -6,7 +6,7 @@ const PopularCategoryCard = ({Icon,name,gigCount}) => {
       <div className="w-full">
         <Icon
           size={44}
-          className="text-primary-700 w-full group-hover:text-white transition-all ease-in-out duration-500"
+          className="text-primary-600 w-full group-hover:text-white transition-all ease-in-out duration-500"
         />
         <p className="my-5 w-full text-center group-hover:text-white transition-all ease-in-out duration-500">
           {name}
