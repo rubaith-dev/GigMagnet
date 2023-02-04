@@ -1,5 +1,6 @@
 import React from "react";
-import { PopularCategoryCard, Title } from "@/components/Shared";
+import { Title } from "@/components/Shared";
+import PopularCategoryCard from "./PopularCategoryCard";
 import { motion } from "framer-motion";
 import categories  from "./popularCategory";
 

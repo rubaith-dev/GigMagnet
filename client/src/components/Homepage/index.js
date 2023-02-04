@@ -6,6 +6,7 @@ import Testimonial from "./Testimonial";
 import TheBestPart from "./TheBestPart";
 import YourDreamJob from "./YourDreamJob";
 import TrustedBy from "./TrustedBy";
+import WhyChooseUs from "./WhyChooseUs";
 
 export {
   AllDoable,
@@ -15,5 +16,6 @@ export {
   Testimonial,
   TheBestPart,
   YourDreamJob,
-  TrustedBy
+  TrustedBy,
+  WhyChooseUs
 };

@@ -1,5 +1,4 @@
 import React from "react";
-import { Palette } from "lucide-react";
 
 const PopularCategoryCard = ({Icon,name,gigCount}) => {
   return (

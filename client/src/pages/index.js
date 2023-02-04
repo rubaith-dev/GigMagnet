@@ -7,7 +7,8 @@ import {
   Testimonial,
   TheBestPart,
   YourDreamJob,
-  TrustedBy
+  TrustedBy,
+  WhyChooseUs
 } from "../components/Homepage";
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
     <PopularCategory/>
     <TheBestPart/>
     <YourDreamJob/>
+    <WhyChooseUs/>
     <InspiringWork/> 
     <Testimonial/>
     <AllDoable/>
