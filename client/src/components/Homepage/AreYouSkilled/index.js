@@ -1,6 +1,6 @@
 import React from "react";
 
-const YourDreamJob = () => {
+const AreYouSkilled = () => {
   return (
     <div className="bg-skill_image h-[450px] w-full bg-cover bg-center bg-no-repeat relative">
       <div className="h-full w-full absolute backdrop-blur-[10px]"></div>
@@ -23,4 +23,4 @@ const YourDreamJob = () => {
   );
 };
 
-export default YourDreamJob;
+export default AreYouSkilled;

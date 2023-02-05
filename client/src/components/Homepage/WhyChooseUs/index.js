@@ -5,7 +5,7 @@ import chooseUsCardContent from "./content";
 const WhyChooseUs = () => {
   return (
     <div className="bg-gray-100">
-      <div className="container pt-14">
+      <div className="container py-14">
         <Title title={"Why Choose Us"} />
         <div className=" grid grid-cols-2 mt-10 ">
           {chooseUsCardContent.map(

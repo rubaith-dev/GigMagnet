@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         hero_image: "url('/Assets/hero_1.jpg.webp')",
-        skill_image:"url('/Assets/Technical-Skills.jpg')"
+        skill_image:"url('/Assets/Technical-Skills.jpg')",
+        videoThumbnail:"url('/Assets/homepage/videoThumbnail.jpeg')"
       },
 
       colors: {

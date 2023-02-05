@@ -1,3 +1,5 @@
 import Title from "./Title";
+import PrevArrow from "./CustomArrowSlider/PrevArrow";
+import NextArrow from "./CustomArrowSlider/NextArrow";
 
-export {Title}
+export {Title, PrevArrow, NextArrow}

@@ -2,7 +2,7 @@ import React from "react";
 import { Title } from "@/components/Shared";
 import PopularCategoryCard from "./PopularCategoryCard";
 import { motion } from "framer-motion";
-import categories  from "./popularCategory";
+import categories from "./popularCategory";
 
 const parentAnimation = {
   hidden: { opacity: 0 },
@@ -30,7 +30,7 @@ const itemAnimation = {
 
 const PopularCategory = () => {
   return (
-    <div className="mt-12 container">
+    <div className="my-12 container">
       <Title title={"Popular Categories"} />
 
       <motion.div
@@ -39,9 +39,9 @@ const PopularCategory = () => {
         initial="hidden"
         animate="show"
       >
-        {categories.map(({ name, Icon, gigCount }) => {
+        {categories.map(({ name, Icon, gigCount }, index) => {
           return (
-            <motion.div variants={itemAnimation}>
+            <motion.div variants={itemAnimation} key={index}>
               <PopularCategoryCard
                 name={name}
                 Icon={Icon}

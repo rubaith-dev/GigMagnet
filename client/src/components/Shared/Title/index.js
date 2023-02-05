@@ -1,8 +1,8 @@
 import React from "react";
 
-const Title = ({ size = "text-3xl", title }) => {
+const Title = ({ size = "text-3xl", title, className }) => {
   return (
-    <div className="grid justify-center">
+    <div className={`grid justify-center ${className}`}>
       <p className={`${size} text-gray-600`}>{title}</p>
     </div>
   );
