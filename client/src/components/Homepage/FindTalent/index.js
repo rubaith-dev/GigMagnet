@@ -9,6 +9,7 @@ const FindTalent = () => {
         subTitle="Empower your skills. Shape your success."
         btnTitle="I am Talent"
         imageSrc="/Assets/homepage/itsDoable.webp"
+  
       />
 
       <FindTalentGrid
@@ -16,6 +17,7 @@ const FindTalent = () => {
         subTitle="Expert talent. Successful Business."
         btnTitle="Find Talent"
         imageSrc="/Assets/homepage/findExpert.webp"
+       
       />
     </div>
   );
@@ -31,6 +33,7 @@ const FindTalentGrid = ({ title, subTitle, btnTitle,imageSrc }) => {
         fill
         alt="doable image"
         // sizes="100%"
+        priority={true}
       />
       <div className="text-white w-full absolute z-20 top-1/2 -translate-y-1/2 text-center">
         <p className="text-xl lg:text-3xl">{title}</p>

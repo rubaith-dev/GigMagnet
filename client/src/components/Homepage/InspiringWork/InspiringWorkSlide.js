@@ -10,6 +10,7 @@ const InspiringWorkSlide = ({image,name,title}) => {
           fill
           sizes="100%"
           priority={true}
+          alt=""
         />
         <div className="absolute z-10 w-full bottom-0 bg-gray-100 py-3 px-8">
           <p className="text-gray-600 text-lg">{title}</p>

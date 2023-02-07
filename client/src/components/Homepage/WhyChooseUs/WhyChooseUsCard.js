@@ -1,8 +1,8 @@
-import { useWindowWidth } from "@react-hook/window-size";
+import { useWindowSize } from "@/utils/hooks";
 import React from "react";
 
 const WhyChooseUsCard = ({ cardTitle, description, Icon, count }) => {
-  const width = useWindowWidth();
+  const width = useWindowSize();
 
   return (
     <div

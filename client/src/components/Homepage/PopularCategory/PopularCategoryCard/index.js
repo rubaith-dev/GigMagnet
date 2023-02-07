@@ -1,8 +1,8 @@
 import React from "react";
-import { useWindowWidth } from "@react-hook/window-size";
+import { useWindowSize } from "@/utils/hooks";
 
 const PopularCategoryCard = ({ Icon, name, gigCount }) => {
-  const width = useWindowWidth();
+  const width = useWindowSize();
 
   return (
     <div className="py-3 md:py-0 md:h-52 rounded-md bg-gray-200 grid place-items-center shadow-xl cursor-pointer hover:bg-primary-500 group hover:scale-105 transition-all ease-in-out duration-500">
