@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  AllDoable,
+  FindTalent,
   HeroSection,
   InspiringWork,
   PopularCategory,
@@ -20,7 +20,7 @@ const Index = () => {
       <AreYouSkilled />
       <InspiringWork />
       <Testimonial />
-      <AllDoable />
+      <FindTalent />
     </div>
   );
 };

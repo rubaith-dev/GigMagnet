@@ -6,11 +6,11 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 const Testimonial = () => {
   return (
     <div className="bg-gray-100 py-10">
-      <div className="h-96 relative w-full grid grid-cols-2 container gap-10">
+      <div className="h-[500px] md:h-96 relative w-full flex flex-col-reverse md:grid grid-cols-2 container gap-10">
         <div className="grid place-items-center">
           <div className="h-fit">
             <p className="text-3xl ">Testimonies</p>
-            <p className="italic text-xl my-3">
+            <p className="italic text-sm md:text-xl my-3">
               "This freelancing platform is a game-changer! It connects
               freelancers with diverse clients, offers a user-friendly
               interface, reliable communication, secure payments, and a

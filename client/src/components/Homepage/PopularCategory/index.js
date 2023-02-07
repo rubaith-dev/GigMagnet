@@ -30,11 +30,11 @@ const itemAnimation = {
 
 const PopularCategory = () => {
   return (
-    <div className="my-12 container">
+    <div className="my-6 md:my-12 container">
       <Title title={"Popular Categories"} />
 
       <motion.div
-        className="grid grid-cols-4 gap-5 mt-10"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5 md:mt-10"
         variants={parentAnimation}
         initial="hidden"
         animate="show"

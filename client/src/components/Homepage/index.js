@@ -1,4 +1,4 @@
-import AllDoable from "./AllDoable";
+import FindTalent from "./FindTalent";
 import HeroSection from "./HeroSection";
 import InspiringWork from "./InspiringWork";
 import PopularCategory from "./PopularCategory";
@@ -8,7 +8,7 @@ import TrustedBy from "./TrustedBy";
 import WhyChooseUs from "./WhyChooseUs";
 
 export {
-  AllDoable,
+  FindTalent,
   HeroSection,
   InspiringWork,
   PopularCategory,
