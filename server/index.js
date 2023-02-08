@@ -1,6 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import authRoutes from "./routes/AuthRoutes.js";
+import cookieParser from "cookie-parser";
+import { errorHandlerMiddleware } from "./middlewares/index.js";
 
 dotenv.config();
 
@@ -15,7 +18,12 @@ app.use(
   })
 );
 
-app.use(express.json())
+app.use(cookieParser());
+app.use(express.json());
+
+app.use("/api/auth", authRoutes);
+
+app.use(errorHandlerMiddleware)
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
