@@ -18,8 +18,9 @@ const Index = () => {
       <PopularCategory />
       <WhyChooseUs />
       <AreYouSkilled />
-      <InspiringWork />
       <Testimonial />
+      <InspiringWork />
+      
       <FindTalent />
     </div>
   );

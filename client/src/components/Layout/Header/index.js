@@ -1,6 +1,7 @@
-import React from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useScrollPosition } from "@/utils/hooks";
 
 const links = [
   {
@@ -24,23 +25,45 @@ const links = [
 ];
 
 const Header = () => {
+  const headerRef = useRef(null);
+  const scrollPosition = useScrollPosition();
+
+  console.log(scrollPosition);
+
   return (
-    <div className="w-full absolute top-0 left-0 z-50">
-      <div className="px-10 py-3 flex justify-between">
-        <div className="h-16 w-16 relative">
+    <div
+      className={`${
+        scrollPosition > 10
+          ? "bg-gray-100 shadow-2xl"
+          : "bg-transparent "
+      } w-full fixed top-0 left-0 z-50 transition-all duration-500`}
+      ref={headerRef}
+    >
+      <div className="px-20 py-3 flex justify-between">
+        <div className="h-14 w-14 relative">
           <Image
-            src="/Assets/white-logo.webp"
+            src={`/Assets/${
+              scrollPosition > 10 ? "color-logo.webp" : "white-logo.webp"
+            }`}
             fill
             className="h-10 w-10 object-cover"
           />
         </div>
 
-        <ul className="text-white flex items-center gap-5 text-lg">
-          {links.map(({ title, type, link }) => {
+        <ul
+          className={`flex items-center gap-5 text-lg ${
+            scrollPosition > 10 ? "text-gray-600" : "text-white"
+          }`}
+        >
+          {links.map(({ title, type, link }, index) => {
             return type === "link" ? (
-              <li><Link href={link}>{title}</Link></li>
+              <li key={index}>
+                <Link href={link}>{title}</Link>
+              </li>
             ) : (
-              <button className="h-fit">{title}</button>
+              <button className="h-fit" key={index}>
+                {title}
+              </button>
             );
           })}
         </ul>
