@@ -1,4 +1,4 @@
-import { StatusCodes } from "http-status-codes";
+const { StatusCodes } = require("http-status-codes");
 
 class BadRequest extends Error {
   constructor(message) {
@@ -7,4 +7,4 @@ class BadRequest extends Error {
   }
 }
 
-export default BadRequest;
+module.exports = BadRequest;

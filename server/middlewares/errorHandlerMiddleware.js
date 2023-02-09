@@ -1,9 +1,9 @@
-
-const errorHandlerMiddleware = (err,req,res,next) => {
+const errorHandlerMiddleware = (err, req, res, next) => {
+  console.log(err.message)
   res.status(err.statusCode).json({
-    msg:err.message,
-    success: false
-  })
-}
+    msg: err.message,
+    success: false,
+  });
+};
 
-export default errorHandlerMiddleware
+module.exports = errorHandlerMiddleware 
