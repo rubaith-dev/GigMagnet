@@ -2,7 +2,7 @@ const express = require("express");
 require('express-async-errors');
 const dotenv = require("dotenv");
 const cors = require("cors");
-const authRoutes = require("./routes/AuthRoutes.js");
+const authRoutes = require("./routes/authRoutes");
 const cookieParser = require("cookie-parser");
 const { errorHandlerMiddleware } = require("./middlewares");
 
