@@ -1,9 +1,11 @@
 const errorHandlerMiddleware = (err, req, res, next) => {
-  console.log(err.message)
+  console.log(err)
   res.status(err.statusCode).json({
-    msg: err.message,
+    message: err.message,
     success: false,
+    status_code:err.statusCode
   });
+
 };
 
 module.exports = errorHandlerMiddleware 

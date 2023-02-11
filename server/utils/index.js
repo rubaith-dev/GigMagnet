@@ -1,6 +1,11 @@
 const generateJwt = require("./auth/generateJwt");
-const generateHashPassword = require("./auth/generateHashPassword")
-const validationErrorMessageBuilder = require("./global/validationErrorMessageBuilder");
-const commonResponse = require("./global/commonResponse")
+const generateHashPassword = require("./auth/generateHashPassword");
+const apiResponse = require("./apiResponse");
+const validationErrorMessageBuilder = require("./validationErrorMessageBuilder")
 
-module.exports = {generateHashPassword, generateJwt, validationErrorMessageBuilder , commonResponse}
+module.exports = {
+  generateHashPassword,
+  generateJwt,
+  apiResponse,
+  validationErrorMessageBuilder
+};
