@@ -2,45 +2,23 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useScrollPosition } from "@/utils/hooks";
-
-const links = [
-  {
-    title: "Find Gigs",
-    link: "#",
-    type: "link",
-  },
-  {
-    title: "Become a Seller",
-    link: "#",
-    type: "link",
-  },
-  {
-    title: "Sign in",
-    type: "button",
-  },
-  {
-    title: "Join",
-    type: "button",
-  },
-];
+import { links } from "./links";
 
 const Header = () => {
   const headerRef = useRef(null);
   const scrollPosition = useScrollPosition();
 
-  console.log(scrollPosition);
-
   return (
     <div
       className={`${
         scrollPosition > 10
-          ? "bg-gray-100 shadow-2xl"
+          ? "bg-gray-100 shadow-xl"
           : "bg-transparent "
       } w-full fixed top-0 left-0 z-50 transition-all duration-500`}
       ref={headerRef}
     >
       <div className="px-20 py-3 flex justify-between">
-        <div className="h-14 w-14 relative">
+        <div className="h-12 w-12 relative">
           <Image
             src={`/Assets/${
               scrollPosition > 10 ? "color-logo.webp" : "white-logo.webp"
@@ -61,7 +39,7 @@ const Header = () => {
                 <Link href={link}>{title}</Link>
               </li>
             ) : (
-              <button className="h-fit" key={index}>
+              <button className={`h-fit ${title === "Join" ? "px-5 py-1 bg-primary-700 rounded-md text-white":""}`} key={index}>
                 {title}
               </button>
             );

@@ -20,7 +20,6 @@ const Index = () => {
       <AreYouSkilled />
       <Testimonial />
       <InspiringWork />
-      
       <FindTalent />
     </div>
   );
