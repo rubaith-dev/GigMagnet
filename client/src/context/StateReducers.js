@@ -1,4 +1,4 @@
-import {ACTIONS} from "./actions";
+import ACTIONS from "./actions";
 
 export const initialState = {
   showLoginModal: false,
@@ -6,21 +6,20 @@ export const initialState = {
 };
 
 export const reducer = (state, action) => {
-  switch (action.type) {
+  const { type, payload } = action;
+  switch (type) {
     case ACTIONS.TOGGLE_LOGIN_MODAL:
       return {
         ...state,
-        showLoginModal: action.showLoginModal,
+        showLoginModal: payload,
       };
     case ACTIONS.TOGGLE_SIGNUP_MODAL:
+      console.log(payload)
       return {
         ...state,
-        showSignupModal: action.showSignupModal,
+        showSignupModal: payload,
       };
-
     default:
       return state;
   }
 };
-
-

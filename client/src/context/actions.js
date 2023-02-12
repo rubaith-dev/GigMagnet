@@ -1,4 +1,6 @@
-export const ACTIONS = {
+const ACTIONS = {
     TOGGLE_LOGIN_MODAL: "TOGGLE_LOGIN_MODAL",
     TOGGLE_SIGNUP_MODAL: "TOGGLE_SIGNUP_MODAL",
   };
+
+  export default ACTIONS
