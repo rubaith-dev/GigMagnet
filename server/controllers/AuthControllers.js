@@ -47,7 +47,7 @@ const signUp = async (req, res, next) => {
   }
 
   // If user found return error
-  return error(res, StatusCodes.BAD_REQUEST, "User already exist with this email");
+  return error(res, StatusCodes.BAD_REQUEST, "User already exist with this email"); 
 };
 
 module.exports = { signUp };
