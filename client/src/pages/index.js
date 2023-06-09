@@ -5,22 +5,24 @@ import {
   InspiringWork,
   PopularCategory,
   Testimonial,
-  TheBestPart,
-  YourDreamJob,
-  TrustedBy
+  TrustedBy,
+  AreYouSkilled,
+  WhyChooseUs,
 } from "../components/Homepage";
 
 const Index = () => {
-  return <div >
-    <HeroSection/>
-    <TrustedBy/>
-    <PopularCategory/>
-    <TheBestPart/>
-    <YourDreamJob/>
-    <InspiringWork/> 
-    <Testimonial/>
-    <AllDoable/>
-  </div>;
+  return (
+    <div>
+      <HeroSection />
+      <TrustedBy/>
+      <PopularCategory />
+      <WhyChooseUs />
+      <AreYouSkilled />
+      <InspiringWork />
+      <Testimonial />
+      <AllDoable />
+    </div>
+  );
 };
 
 export default Index;
