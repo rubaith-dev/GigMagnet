@@ -12,7 +12,7 @@ const WhyChooseUsCard = ({ cardTitle, description, Icon, count }) => {
       } border-gray-400 border-double`}
     >
       <Icon
-        size={width > 768 ? "70" : width === 768 ? "50" : "40"}
+        size={width < 768 ? "40" : width === 768 ? "50" : "70"}
         className="text-primary-500 mx-auto"
       />
       <p className="text-center my-2 md:my-5 text-lg md:text-2xl text-gray-500">

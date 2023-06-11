@@ -1,3 +1,4 @@
 import useWindowSize from "./useWindowSize";
+import useScrollPosition from "./useScrollPosition";
 
-export {useWindowSize}
+export {useWindowSize, useScrollPosition}
