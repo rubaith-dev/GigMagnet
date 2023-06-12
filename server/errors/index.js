@@ -1,3 +1,3 @@
-import BadRequest from "./badRequest.js";
+const BadRequest = require("./BadRequest");
 
-export { BadRequest };
+module.exports=  { BadRequest };

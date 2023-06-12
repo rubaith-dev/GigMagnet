@@ -1,9 +1,11 @@
-import express from "express";
-import dotenv from "dotenv";
-import cors from "cors";
-import authRoutes from "./routes/AuthRoutes.js";
-import cookieParser from "cookie-parser";
-import { errorHandlerMiddleware } from "./middlewares/index.js";
+const express = require("express");
+require('express-async-errors');
+const dotenv = require("dotenv");
+const cors = require("cors");
+const authRoutes = require("./routes/AuthRoutes.js");
+const cookieParser = require("cookie-parser");
+const { errorHandlerMiddleware } = require("./middlewares");
+
 
 dotenv.config();
 
@@ -20,6 +22,7 @@ app.use(
 
 app.use(cookieParser());
 app.use(express.json());
+
 
 app.use("/api/auth", authRoutes);
 

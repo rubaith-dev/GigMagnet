@@ -1,3 +1,3 @@
-import errorHandlerMiddleware from "./errorHandlerMiddleware.js";
+const errorHandlerMiddleware = require("./errorHandlerMiddleware");
 
-export { errorHandlerMiddleware };
+module.exports = { errorHandlerMiddleware };

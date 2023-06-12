@@ -1,23 +1,41 @@
-import { PrismaClient } from "@prisma/client";
-import { BadRequest } from "../errors/index.js";
-import { genSalt, hash } from "bcrypt";
+const { PrismaClient } = require("@prisma/client");
+const { BadRequest } = require("../errors");
+const {
+  generateHashPassword,
+  generateJwt,
+  validationErrorMessageBuilder,
+  commonResponse,
+} = require("../utils");
+const { validateSignup } = require("../validators");
 
-export const signUp = async (req, res, next) => {
-  const prisma = new PrismaClient();
+const signUp = async (req, res, next) => {
+  const { error } = validateSignup(req.body);
 
-  const { email, password } = req.body;
-  if (!email || !password) {
-    throw new BadRequest(`Email and Password can not be empty`);
+  if (error) {
+    res.status(400).json(commonResponse(validationErrorMessageBuilder(error), false));
   }
 
-  const user = await prisma.user.create({
-    data: { email, password: await generatePassword(password) },
-  });
+  // console.log(error)
 
-  res.send({ email, password });
+  // const prisma = new PrismaClient();
+
+  // throw new BadRequest(["kuttarbaccha kam kn koros na", "ghjkghjkxczc"]);
+
+  // const { email, password } = req.body;
+  // if (!email || !password) {
+  //   throw new BadRequest(`Email and Password can not be empty`);
+  // }
+
+  // const user = await prisma.user.create({
+  //   data: { email, password: await generateHashPassword(password) },
+  // });
+
+  // const token = generateJwt(email, user.id);
+
+  // return res
+  //   .cookie("jwt", token)
+  //   .status(201)
+  //   .json({ msg: "User created successfully" });
 };
 
-const generatePassword = async (password) => {
-  const salt = await genSalt();
-  return await hash(password, salt);
-};
+module.exports = { signUp };
