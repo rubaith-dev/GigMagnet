@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import { StateProvider } from "@/context/StateContext";
 import { initialState, reducer } from "@/context/StateReducers";
+import { Signin, Signup } from "@/components/Auth";
 
 const workSans = Work_Sans({ subsets: ["latin"] });
 
@@ -17,6 +18,8 @@ export default function App({ Component, pageProps }) {
         </Head>
         <Layout>
           <Component {...pageProps} />
+          <Signin/>
+          <Signup/>
         </Layout>
       </StateProvider>
     </main>
